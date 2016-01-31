@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-5">
+                <h4>Formulario de Atualização</h4>
+                <form class="" method="post"
+                      action="/application/index/edit/<?php echo $this->cliente->getId(); ?>" class="form-control">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome" required
+                               value="<?php echo $this->cliente->getNome(); ?>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" name="endereco" id="endereco" required
+                               value="<?php echo $this->cliente->getEndereco(); ?>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="numero">Numero:</label>
+                        <input type="text" name="numero" id="numero" required
+                               value="<?php echo $this->cliente->getNumero(); ?>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Atualizar</button>
+                        <a href="/application/index/index" type="submit" class="btn btn-danger">Cancelar</a>
+                    </div>
+                </form>
+
+        </div>
+    </div>
+</div>

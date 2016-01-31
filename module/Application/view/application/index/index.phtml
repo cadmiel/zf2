@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Lista de clientes | <a href="/application/index/create">Cadastrar novo</a></div>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>Numero</th>
+                        <th>Ação</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach($this->clientes as $cliente): ?>
+                    <tr>
+                        <th scope="row"><?php echo $cliente->getId(); ?></th>
+                        <td><?php echo $cliente->getNome(); ?></td>
+                        <td><?php echo $cliente->getEndereco(); ?></td>
+                        <td><?php echo $cliente->getNumero(); ?></td>
+                        <td>
+                            <a href="/application/index/edit/<?php echo $cliente->getId(); ?>">Editar</a>
+                            <a href="/application/index/delete/<?php echo $cliente->getId(); ?>">Excluir</a>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
